@@ -13,5 +13,5 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates wget python make g+
   && apk del .build-deps
 
 COPY docker/vue-storefront/vue-storefront.sh /usr/local/bin/
-
+RUN ["chmod", "+x", "/usr/local/bin/vue-storefront.sh"]
 CMD ["vue-storefront.sh"]
